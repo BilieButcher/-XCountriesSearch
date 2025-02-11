@@ -6,7 +6,7 @@ import React from "react";
 
 const Card = ({flag, name}) => {
     return(
-        <>
+        
         <div className="countryCard"
         style={{
             width:"200px",
@@ -26,7 +26,7 @@ const Card = ({flag, name}) => {
             <img src={flag} alt={name} style={{width:"100px", height:"100px"}}/>
             <h2>{name}</h2>
         </div>
-        </>
+    
     );
 }
 
