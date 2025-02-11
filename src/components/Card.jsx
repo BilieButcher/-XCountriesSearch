@@ -7,7 +7,8 @@ import React from "react";
 const Card = ({flag, name}) => {
     return(
         
-        <div
+        <div 
+        className="countryCard"
         style={{
             width:"200px",
             height:"200px",
