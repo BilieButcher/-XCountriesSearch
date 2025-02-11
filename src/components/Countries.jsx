@@ -30,7 +30,7 @@ const Countries = () => {
     },[]);
 
     return(
-        <div >
+        <div className="countryCard">
             <div  style={{height:"50px", border:"1px solid black", padding:"5px", paddingTop:"0px", marginBottom:"10px", background:"rgb(248,248,248)"}}>
            <input onChange={(e) => {setSearch(e.target.value)}} type="text" placeholder="Search for countries..." style={{width:"400px", height:"40px", borderRadius:"5px", margin:"4px"}}></input>
            </div>
@@ -39,7 +39,7 @@ const Countries = () => {
             return search.toLowerCase() === '' ? index : index.common.toLowerCase().includes(search)
            }).map((index) => {
             return(
-                <Card 
+                <Card className="countryCard"
                 flag={index.png}
                 name={index.common}
                 />

@@ -8,6 +8,7 @@ const Card = ({flag, name}) => {
     return(
         
         <div
+        className="countryCard"
         style={{
             width:"200px",
             height:"200px",
