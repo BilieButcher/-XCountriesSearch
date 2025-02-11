@@ -39,7 +39,7 @@ const Countries = () => {
             return search.toLowerCase() === '' ? index : index.common.toLowerCase().includes(search)
            }).map((index) => {
             return(
-                <Card className="countryCard"
+                <Card 
                 flag={index.png}
                 name={index.common}
                 />
