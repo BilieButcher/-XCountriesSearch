@@ -35,16 +35,11 @@ const Countries = () => {
            <input onChange={(e) => {setSearch(e.target.value)}} type="text" placeholder="Search for countries..." style={{width:"400px", height:"40px", borderRadius:"5px", margin:"4px"}}></input>
            </div>
             <div  style={{display:"flex", flexWrap:"wrap", justifyContent:"center", alignItems:"center"}}>
-           {country.filter((index) => {
-            return search.toLowerCase() === '' ? index : index.common.toLowerCase().includes(search)
-           }).map((index) => {
-            return(
-                <Card 
-                flag={index.png}
-                name={index.common}
-                />
-            )
-           })}
+            {country
+  .filter((index) => search === "" || index.common.toLowerCase().includes(search.toLowerCase()))
+  .map((index) => (
+    <Card key={index.common} flag={index.png} name={index.common} />
+  ))}
            </div>
 
         </div>
